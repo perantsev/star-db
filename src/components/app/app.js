@@ -6,19 +6,10 @@ import ErrorIndicator from '../error-indicator';
 import SwapiService from '../../services/swapi-service';
 import {SwapiServiceProvider} from '../swapi-service-context';
 import {
-  PersonDetails,
-  PlanetDetails,
-  StarshipDetails,
-  PersonList,
-  PlanetList,
-  StarshipList
-} from '../sw-components';
-import {
   PeoplePage,
   PlanetsPage,
   StarshipsPage
 } from '../pages';
-
 
 import './app.css';
 
