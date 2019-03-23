@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 
 import Header from '../header';
 import RandomPlanet from '../random-planet';
-import ItemDetails, { Record } from '../item-details';
-import ErrorButton from '../error-button';
-// import PeoplePage from '../people-page';
 import ErrorIndicator from '../error-indicator';
-import Row from '../row';
 import SwapiService from '../../services/swapi-service';
 import {SwapiServiceProvider} from '../swapi-service-context';
 import {
@@ -107,17 +103,8 @@ export default class App extends Component {
             <Route path="/"
               render={() => <h2>Welcome to StarDB</h2>}
               exact />
-            <Route path="/people/" exact component={PeoplePage} />
-            <Route path="/people/:id"
-              render={({ match }) => {
-                const { id } = match.params;
-                return (
-                  <PersonDetails
-                    itemId={id} >
-                  </PersonDetails>
-                );
-              }} />
-            <Route path="/planets/" component={PlanetsPage} />
+            <Route path="/people/:id?" exact component={PeoplePage} />
+            <Route path="/planets/:id?" component={PlanetsPage} />
             <Route path="/starships/:id?" component={StarshipsPage} />
 
 
